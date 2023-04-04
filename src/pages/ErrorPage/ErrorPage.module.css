@@ -1,0 +1,56 @@
+.container .wrapper:nth-child(1) {
+  background-color: var(--pantone-purple);
+}
+
+.container .wrapper > .top {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 10px;
+}
+
+.container .wrapper > .top > h6 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.container .wrapper > .top > span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.container .wrapper > .top > span > span {
+  color: var(--pink);
+}
+
+/* error page */
+.container .wrapper:nth-child(2) {
+  background: #fff;
+}
+
+.container .wrapper .center {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 10px 50px;
+  text-align: center;
+}
+
+.container .wrapper .center > img {
+  width: 50%;
+}
+
+.container .wrapper .center > h6 {
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  color: var(--navy-blue);
+  width: 80%;
+}
+
+.container .wrapper .center > a {
+  padding: 15px 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: var(--pink);
+  border-radius: 2px;
+  color: #fff;
+}

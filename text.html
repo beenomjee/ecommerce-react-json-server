@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
+
+      let data = [];
+
+      for (let index = 0; index < 3; index++) {
+        let price = faker.commerce.price(10);
+        let product = {
+          id: index + 1,
+          category: faker.commerce.department(),
+          price,
+          oldPrice: faker.commerce.price(price + 2),
+          name: faker.commerce.product(),
+          description: faker.commerce.productDescription(),
+          rating: (faker.phone.phoneNumber("#") % 5) + 1,
+          img: faker.image.dataUri(),
+        };
+
+        let reviews = [];
+        for (let i = 0; i < (faker.phone.phoneNumber("#") % 5) + 1; i++) {
+          name = faker.name.firstName();
+          let review = {
+            name,
+            email: faker.internet.email(name),
+            message:
+              product.name +
+              " is very good at the price of $" +
+              product.price +
+              ".",
+          };
+          reviews.push(review);
+        }
+
+        product.reviews = reviews;
+
+        data.push(product);
+      }
+
+      window.localStorage.setItem("data", JSON.stringify(data));
+    </script>
+  </body>
+</html>

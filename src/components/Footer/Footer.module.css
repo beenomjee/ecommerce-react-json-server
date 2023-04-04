@@ -1,0 +1,13 @@
+.footer .wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 10px;
+}
+
+.footer .wrapper h6 {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: var(--lato);
+  color: var(--navy-blue);
+  text-align: center;
+}
